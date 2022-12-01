@@ -1,0 +1,184 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/promo";
+
+@import "./components/cookie-alert";
+@import "./components/welcome";
+@import "./components/contacts";
+@import "./components/testimonials";
+@import "./components/blog";
+@import "./components/about";
+@import "./components/about-main";
+
+@import "./components/stories";
+@import "./components/blog-single";
+
+.link:hover {
+  color: #B04252;
+  transition: all 0.3s ease-in-out;
+}
+.link {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  width: fit-content;
+  &:before {
+    position: absolute;
+    bottom: -3px;
+    width: 0;
+    background-color: $pink-color;
+    height: 1px;
+    transition: width 0.3s ease-in-out;
+    content: '';
+  }
+  &:hover {
+    &:before {
+      width: 100%;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+
+.btn {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  color: #464646;
+  padding: 17px 29px 17px 39px;
+  background: #EDE3DE;
+  border: 1px solid #464646;
+  border-radius: 5px;
+  position: relative;
+  span {
+    position: relative;
+    z-index: 5;
+    transition: color 0.4s ease-in-out;
+    top: 2px;
+  }
+  &:before {
+    position: absolute;
+    left: 0;
+    width: 10px;
+    content: '';
+    background: $black-color;
+    top: 0;
+    height: 100%;
+    transition: background 0.2s ease-in-out, width 0.4s ease-in-out;
+  }
+  &:hover {
+    &:before {
+      transition: background 0.2s ease-in-out, width 0.4s ease-in-out;
+      width: 100%;
+      background: $pink-color;
+      z-index: 0;
+    }
+    span {
+      color: $light-color;
+      transition: color 0.4s ease-in-out;
+    }
+    border: 1px solid $pink-color;
+  }
+}
+
+#mouse-scroll {
+  display: block;
+}
+
+#mouse-scroll .mouse {
+  height: 21px;
+  width: 14px;
+  border-radius: 10px;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  border: 2px solid #ffffff;
+}
+#mouse-scroll .mouse {
+  height: 43px;
+  width: 28px;
+  border-radius: 120px;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  border: 2px solid #ffffff;
+  top: 170px;
+  overflow: hidden;
+}
+#mouse-scroll .mouse-in {
+  height: 20px;
+  width: 2px;
+  display: block;
+  margin: 5px auto;
+  background: #ffffff;
+  position: relative;
+}
+#mouse-scroll .mouse-in:before {
+  position: absolute;
+  content: '';
+  left: -1px;
+  width: 10px;
+  height: 2px;
+  background: #fff;
+  bottom: 2px;
+  transform: rotate(-45deg);
+}
+#mouse-scroll .mouse-in:after {
+  position: absolute;
+  content: '';
+  right: -1px;
+  width: 10px;
+  height: 2px;
+  background: #fff;
+  bottom: 2px;
+  transform: rotate(45deg);
+}
+#mouse-scroll .mouse-in {
+  -webkit-animation: animated-mouse 1.9s ease infinite;
+  moz-animation: mouse-animated 1.9s ease infinite;
+}
+
+@-webkit-keyframes animated-mouse {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(-29px);
+    -ms-transform: translateY(-29px);
+    transform: translateY(-29px);
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+}
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,9 @@
+// настройка sass переменных. Выносить сюда цвета, шрифты, ширину контейнера
+$font-family: "Dihjauti", sans-serif;
+$content-width: 1620px;
+$container-offset: 150px;
+$container-width: calc($content-width + ($container-offset * 2)); // colors
+$light-color: #EDE3DE;
+$black-color: #464646;
+$white-color: #FFECEF;
+$pink-color: #B04252;

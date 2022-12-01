@@ -1,30 +1,29 @@
 .stories {
-  padding: 200px 0 170px 0;
-  &-items__wrapper {
-    margin-top: 206px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 40px;
-  }
-
-  &-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    &__image {
-      max-width: 514px;
-      max-height: 513px;
+    padding: 200px 0 170px 0;
+    &-items__wrapper {
+        margin-top: 206px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 40px;
     }
-    &__title {
-      margin-top: 10px;
-      font-family: 'Anya Tamy';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 32px;
-      line-height: 41px;
-      color: $black-color;
-      margin-bottom: 0;
-    }
-  }
 
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &__image {
+            max-width: 514px;
+            max-height: 513px;
+        }
+        &__title {
+            margin-top: 10px;
+            font-family: "Anya Tamy";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 41px;
+            color: $black-color;
+            margin-bottom: 0;
+        }
+    }
 }

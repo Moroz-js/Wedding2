@@ -1,263 +1,264 @@
 .about {
-  padding: 200px 0;
+    padding: 200px 0;
 }
 .about {
-  &-swiper {
-    height: 730px;
-    .swiper-slide {
-      background-size: cover;
-      position: relative;
-      &::before {
-        background: linear-gradient(180deg, rgba(43, 43, 43, 0) 0%, rgba(0, 0, 0, 0.82) 100%);
-        position: absolute;;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        height: 70%;
-        content: '';
-        z-index: 0;
-      }
-    }
-
-    .swiper-navigation {
-      position: absolute;
-      bottom: 46px;
-      left: 182px;
-      display: flex;
-      .swiper-pagination-explore-btn {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 29px;
-        /* identical to box height */
-
-        text-transform: uppercase;
-        position: absolute;
-        z-index: 1;
-        color: #FAFAFA;
-        display: flex;
-        align-items: center;
-        right: -400px;
-        top: 10px;
-        cursor: pointer;
-        transition: all 0.3s ease-in-out;
-        svg {
-          position: relative;
-          top: -2px;
-          right: -6px;
-          transition: all 0.3s ease-in-out;
-          path {
-            fill: #464646;
-            transition: all 0.3s ease-in-out;
-          }
-        }
-        &:hover {
-          color: $pink-color;
-          transition: all 0.3s ease-in-out;
-          svg {
-            transition: all 0.3s ease-in-out;
-            right: -38px;
-            path {
-              transition: all 0.3s ease-in-out;
-              fill: $pink-color;
+    &-swiper {
+        height: 730px;
+        .swiper-slide {
+            background-size: cover;
+            position: relative;
+            &::before {
+                background: linear-gradient(
+                    180deg,
+                    rgba(43, 43, 43, 0) 0%,
+                    rgba(0, 0, 0, 0.82) 100%
+                );
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                height: 70%;
+                content: "";
+                z-index: 0;
             }
-          }
         }
 
-      }
-      .swiper-button-next {
-        min-width: 22px;
-        min-height: 22px;
-        max-width: 22px;
-        max-height: 22px;
-        border-radius: 50%;
-        border: 1px solid #F4EEEA;
-        top: 50%;
-        transform: translateY(-50%);
-        position: absolute;
-        right: -32px;
-        margin: 0;
-        &::after {
-          content: '';
-          background-image: url('../../img/about-arrow-next.svg');
-          background-size: contain;
-          height: 8px;
-          width: 13px;
-        }
-      }
-      .swiper-button-prev {
-        min-width: 22px;
-        min-height: 22px;
-        max-width: 22px;
-        max-height: 22px;
-        border-radius: 50%;
-        border: 1px solid #F4EEEA;
-        top: 50%;
-        transform: translateY(-50%);
-        position: absolute;
-        left: -32px;
-        margin: 0;
-        &::after {
-          content: '';
-          background-image: url('../../img/about-arrow-prev.svg');
-          background-size: contain;
-          height: 8px;
-          width: 13px;
-        }
-      }
-      .swiper-pagination {
-        position: relative;
-        display: flex;
-        align-items: center;
-        bottom: 0;
-        height: 35px;
-        &-wrapper {
-          position: relative;
-        }
-        .swiper-pagination-bullet {
-          width: 1px;
-          height: 11px;
-          opacity: 1;
-          transition: height 0.3s ease-in-out;
-          background: #F4EEEA;
-          margin: 0 4px!important;
-          & {
-            &-active {
-              height: 35px;
-              transition: height 0.3s ease-in-out;
+        .swiper-navigation {
+            position: absolute;
+            bottom: 46px;
+            left: 182px;
+            display: flex;
+            .swiper-pagination-explore-btn {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 29px;
+                /* identical to box height */
+
+                text-transform: uppercase;
+                position: absolute;
+                z-index: 1;
+                color: #fafafa;
+                display: flex;
+                align-items: center;
+                right: -400px;
+                top: 10px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                svg {
+                    position: relative;
+                    top: -2px;
+                    right: -6px;
+                    transition: all 0.3s ease-in-out;
+                    path {
+                        fill: #464646;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                &:hover {
+                    color: $pink-color;
+                    transition: all 0.3s ease-in-out;
+                    svg {
+                        transition: all 0.3s ease-in-out;
+                        right: -38px;
+                        path {
+                            transition: all 0.3s ease-in-out;
+                            fill: $pink-color;
+                        }
+                    }
+                }
             }
-          }
+            .swiper-button-next {
+                min-width: 22px;
+                min-height: 22px;
+                max-width: 22px;
+                max-height: 22px;
+                border-radius: 50%;
+                border: 1px solid #f4eeea;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                right: -32px;
+                margin: 0;
+                &::after {
+                    content: "";
+                    background-image: url("../../img/about-arrow-next.svg");
+                    background-size: contain;
+                    height: 8px;
+                    width: 13px;
+                }
+            }
+            .swiper-button-prev {
+                min-width: 22px;
+                min-height: 22px;
+                max-width: 22px;
+                max-height: 22px;
+                border-radius: 50%;
+                border: 1px solid #f4eeea;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                left: -32px;
+                margin: 0;
+                &::after {
+                    content: "";
+                    background-image: url("../../img/about-arrow-prev.svg");
+                    background-size: contain;
+                    height: 8px;
+                    width: 13px;
+                }
+            }
+            .swiper-pagination {
+                position: relative;
+                display: flex;
+                align-items: center;
+                bottom: 0;
+                height: 35px;
+                &-wrapper {
+                    position: relative;
+                }
+                .swiper-pagination-bullet {
+                    width: 1px;
+                    height: 11px;
+                    opacity: 1;
+                    transition: height 0.3s ease-in-out;
+                    background: #f4eeea;
+                    margin: 0 4px !important;
+                    & {
+                        &-active {
+                            height: 35px;
+                            transition: height 0.3s ease-in-out;
+                        }
+                    }
+                }
+            }
         }
-
-      }
-
+        &__text {
+            width: 100%;
+            max-width: 1920px;
+            box-sizing: border-box;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: #fff;
+            padding-left: 150px;
+            padding-bottom: 230px;
+            h2,
+            p {
+                margin: 0;
+            }
+        }
+        .promo-swiper__text {
+            z-index: 1;
+            position: relative;
+            padding-bottom: 108px;
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 26px;
+            color: #f4eeea;
+        }
+        &__title {
+            font-family: "Jomolhari";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 77px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        &__descr {
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 26px;
+            max-width: 517px;
+            color: #f4eeea;
+        }
     }
-    &__text {
-      width: 100%;
-      max-width: 1920px;
-      box-sizing: border-box;
-      height: 100%;
-      margin: 0 auto;
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      justify-content: flex-end;
-      color: #fff;
-      padding-left: 150px;
-      padding-bottom: 230px;
-      h2, p {
-        margin: 0;
-      }
-    }
-    .promo-swiper__text {
-      z-index: 1;
-      position: relative;
-      padding-bottom: 108px;
-      font-weight: 400;
-      font-size: 21px;
-      line-height: 26px;
-      color: #F4EEEA;
-
-    }
-    &__title {
-      font-family: 'Jomolhari';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 48px;
-      line-height: 77px;
-      color: #FFFFFF;
-      margin-bottom: 10px;
-    }
-    &__descr {
-      font-weight: 400;
-      font-size: 21px;
-      line-height: 26px;
-      max-width: 517px;
-      color: #F4EEEA;
-    }
-  }
 }
 .me {
-  margin-top: 180px;
-  background: url("../../img/about-bg.png");
-  background-size: cover;
-  background-position: center;
-  padding: 100px 150px;
-  .container {
-    display: flex;
-    justify-content: space-between;
-  }
-  &-text__wrapper {
-    max-width: 670px;
-    display: flex;
-    flex-direction: column;
-  }
-  &-text__title {
-    margin: 0 0 40px 0;
-    font-family: 'Anya Tamy';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 57px;
-    color: $pink-color;
-  }
-  &-text__descr {
-    margin: 0;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 26px;
-    color: $black-color;
-    &:not(:last-of-type) {
-      margin-bottom: 35px
+    margin-top: 180px;
+    background: url("../../img/about-bg.png");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 150px;
+    .container {
+        display: flex;
+        justify-content: space-between;
     }
-  }
-  &-button {
-    max-width: 196px;
-    margin-top: 146px
-  }
+    &-text__wrapper {
+        max-width: 670px;
+        display: flex;
+        flex-direction: column;
+    }
+    &-text__title {
+        margin: 0 0 40px 0;
+        font-family: "Anya Tamy";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 57px;
+        color: $pink-color;
+    }
+    &-text__descr {
+        margin: 0;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 26px;
+        color: $black-color;
+        &:not(:last-of-type) {
+            margin-bottom: 35px;
+        }
+    }
+    &-button {
+        max-width: 196px;
+        margin-top: 146px;
+    }
 }
 .mission-text {
-  max-width: 1066px;
-  text-align: center;
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+    max-width: 1066px;
+    text-align: center;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .mission {
-  position: relative;
-  margin-top: 122px;
-  margin-bottom: 156px;
-  &-text__wrapper {
-  padding: 78px 0 40px 0;
-  }
-  &-title {
-    margin: 0;
-    font-family: 'Anya Tamy';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 64px;
-    line-height: 76px;
-    color: $pink-color;
-    margin-bottom: 50px
-  }
-  &-descr {
-    margin: 0;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 34px;
-    text-align: center;
-    color: $black-color;
-    &:not(:last-of-type) {
-      margin-bottom: 35px;
+    position: relative;
+    margin-top: 122px;
+    margin-bottom: 156px;
+    &-text__wrapper {
+        padding: 78px 0 40px 0;
     }
-  }
+    &-title {
+        margin: 0;
+        font-family: "Anya Tamy";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 76px;
+        color: $pink-color;
+        margin-bottom: 50px;
+    }
+    &-descr {
+        margin: 0;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 34px;
+        text-align: center;
+        color: $black-color;
+        &:not(:last-of-type) {
+            margin-bottom: 35px;
+        }
+    }
 }
 .mission-image {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%)
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }

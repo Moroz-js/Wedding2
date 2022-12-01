@@ -1,125 +1,122 @@
 .testimonials {
-  padding: 200px 0;
+    padding: 200px 0;
 }
 
 .quote {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-  q {
-    quotes: none;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 51px;
-    text-align: center;
-    color: $pink-color;
-    max-width: 875px;
-    position: relative;
-    &::before {
-      content: '';
-      left: -30px;
-      top: 0;
-      background: url('../../img/quoute-before.svg');
-      width: 30px;
-      height: 20px;
-      position: absolute;
+    q {
+        quotes: none;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 51px;
+        text-align: center;
+        color: $pink-color;
+        max-width: 875px;
+        position: relative;
+        &::before {
+            content: "";
+            left: -30px;
+            top: 0;
+            background: url("../../img/quoute-before.svg");
+            width: 30px;
+            height: 20px;
+            position: absolute;
+        }
+        &::after {
+            content: "";
+            right: -30px;
+            bottom: 0;
+            background: url("../../img/quoute-after.svg");
+            width: 30px;
+            height: 20px;
+            position: absolute;
+        }
     }
-    &::after {
-      content: '';
-      right: -30px;
-      bottom: 0;
-      background: url('../../img/quoute-after.svg');
-      width: 30px;
-      height: 20px;
-      position: absolute;
+
+    &-image {
+        margin-top: 60px;
     }
-  }
-
-
-  &-image {
-    margin-top: 60px;
-  }
 }
 .testimonials-wrapper {
-  margin-top: 175px;
+    margin-top: 175px;
 }
 .testimonials-item {
-  display: flex;
-  &:not(:last-of-type) {
-    margin-bottom: 100px;
-  }
-  &__text {
-    padding: 40px 45px 30px 40px;
-    background: #F4EEEA;
-    border-radius: 5px;
-  }
-  &__title {
-    margin: 0;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 38px;
-    font-family: 'Anya Tamy';
-    text-transform: uppercase;
-    color: $black-color;
-    margin-bottom: 19px;
-  }
-  &__paragraph {
+    display: flex;
+    &:not(:last-of-type) {
+        margin-bottom: 100px;
+    }
+    &__text {
+        padding: 40px 45px 30px 40px;
+        background: #f4eeea;
+        border-radius: 5px;
+    }
+    &__title {
+        margin: 0;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 38px;
+        font-family: "Anya Tamy";
+        text-transform: uppercase;
+        color: $black-color;
+        margin-bottom: 19px;
+    }
+    &__paragraph {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 29px;
+        margin: 0;
+        color: $black-color;
+        &:first-of-type {
+            margin-bottom: 30px;
+        }
+    }
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+        .testimonials-item__image {
+            margin-left: 41px;
+        }
+    }
+    &:nth-child(odd) {
+        .testimonials-item__image {
+            margin-right: 41px;
+        }
+    }
+}
+
+.more {
+    margin-top: 50px;
     font-weight: 400;
     font-size: 18px;
     line-height: 29px;
-    margin: 0;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
     color: $black-color;
-    &:first-of-type {
-      margin-bottom: 30px
-    }
-  }
-  &:nth-child(even) {
-    flex-direction: row-reverse;
-    .testimonials-item__image {
-      margin-left: 41px;
-    }
-  }
-  &:nth-child(odd) {
-    .testimonials-item__image {
-      margin-right: 41px;
-    }
-  }
-}
-
-
-
-.more {
-  margin-top: 50px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 29px;
-  display: flex;
-  align-items: center;
-  text-transform: uppercase;
-  color: $black-color;
-  transition:all 0.3s ease-in-out;
-  svg {
-    margin-left: 22px;
-    position: relative;
-    top: -4px;
-    transition: all 0.5s ease-in-out;
-    path {
-      fill: $black-color;
-      transition: all 0.3s ease-in-out;
-    }
-  }
-  &:hover {
-    color: $pink-color;
-    transition:all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     svg {
-      margin-left: 50px;
-      transition: all 0.5s ease-in-out;
-      path {
-        fill: $pink-color;
-        transition: all 0.3s ease-in-out;
-      }
+        margin-left: 22px;
+        position: relative;
+        top: -4px;
+        transition: all 0.5s ease-in-out;
+        path {
+            fill: $black-color;
+            transition: all 0.3s ease-in-out;
+        }
     }
-  }
+    &:hover {
+        color: $pink-color;
+        transition: all 0.3s ease-in-out;
+        svg {
+            margin-left: 50px;
+            transition: all 0.5s ease-in-out;
+            path {
+                fill: $pink-color;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
 }

@@ -1,38 +1,38 @@
 .cookie-alert {
-  width: auto;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 150px;
-  position: absolute;
-  z-index: 15;
-  bottom: 80px;
-  right: 0;
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 150px;
+    position: absolute;
+    z-index: 15;
+    bottom: 80px;
+    right: 0;
 }
 
 .cookie-wrapper {
-  background: #F4EEEA;
-  border: 1px solid #464646;
-  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  max-width: 440px;
-  padding: 30px;
-  padding-bottom: 36px;
-  &_text {
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 27px;
-    color: #161616;
-    margin-top: 0;
-  }
-  &_link {
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 27px;
-    color: $pink-color;
-  }
-  &_btn {
-    margin-top: 37px;
-    display: block;
-    max-width: 182px;
-  }
+    background: #f4eeea;
+    border: 1px solid #464646;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    max-width: 440px;
+    padding: 30px;
+    padding-bottom: 36px;
+    &_text {
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 27px;
+        color: #161616;
+        margin-top: 0;
+    }
+    &_link {
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 27px;
+        color: $pink-color;
+    }
+    &_btn {
+        margin-top: 37px;
+        display: block;
+        max-width: 182px;
+    }
 }

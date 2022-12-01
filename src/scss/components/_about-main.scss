@@ -1,25 +1,25 @@
 .main-me {
-  background: transparent;
-  background-color: #D9D8DD;
-  position: relative;
-  .container {
+    background: transparent;
+    background-color: #d9d8dd;
     position: relative;
-    z-index: 1;
-  }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
 }
 .background-text {
-  font-family: "Best Rock";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 397.538px;
-  line-height: 773px;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translate(-50%, -50%);
-  color: #E6E6E6;
-  left: 50%;
-  z-index: 0;
-  white-space: nowrap;
+    font-family: "Best Rock";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 397.538px;
+    line-height: 773px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+    color: #e6e6e6;
+    left: 50%;
+    z-index: 0;
+    white-space: nowrap;
 }

@@ -1,0 +1,127 @@
+.stories.single {
+	padding-top: calc(40px + 76px);
+	padding-bottom: 200px;
+	.stories-items__wrapper {
+		margin-top: 0px;
+	}
+	.stories-images{
+		margin-bottom: 200px;
+	}
+}
+.stories-single-header {
+	display: flex;
+}
+.stories-single-breadcrumbs {
+    display: flex;
+    align-items: flex-start;
+    &-item {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 29px;
+        color: $black-color;
+    }
+    &-delimiter {
+        margin: 0 6px;
+    }
+}
+.stories-single-title-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: -25px;
+}
+
+.stories-single__title {
+	font-family: 'Jomolhari';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 83px;
+/* identical to box height */
+margin: 0;
+
+letter-spacing: -0.1em;
+color: #B04252;
+
+}
+.stories-single__subtitle {
+	font-family: 'Anya Tamy';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 41px;
+margin: 0;
+margin-top: 50px;
+margin-bottom: 25px;
+color:$black-color
+}
+
+.stories-see-more {
+	font-family: 'Anya Tamy';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 43px;
+text-align: center;
+text-transform: uppercase;
+display: flex;
+margin: 0 0 20px auto;
+align-items: center;
+max-width: 182px;
+span {
+	position: relative;
+	top: 4px;
+}
+color: $black-color;
+transition: all 0.3s ease-in-out;
+svg {
+	position: relative;
+	right: 0;
+	margin-left: 15px;
+	transition: all 0.3s ease-in-out;
+	path {
+		fill: $black-color;
+		transition: all 0.3s ease-in-out;
+	}
+}
+&:hover {
+	color: $pink-color;
+	transition: all 0.3s ease-in-out;
+	svg {
+		right: -15px;
+		transition: all 0.3s ease-in-out;
+		path {
+			transition: all 0.3s ease-in-out;
+			fill: $pink-color;
+		}
+	}
+}
+}
+.stories-single-contacts {
+	margin-top: 200px;
+	background: #F4EEEA;
+border: 1px solid #464646;
+/* Тень */
+
+box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+padding: 41px 0 42px 0;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+position: relative;
+&__text {
+	margin: 0;
+	font-family: 'Anya Tamy';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 41px;
+	color: #464646;
+}
+&__btn {
+	margin-top: 44px;
+}
+}

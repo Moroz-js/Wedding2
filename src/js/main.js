@@ -52,6 +52,7 @@ const swiper2 = new Swiper(".about-swiper", {
         nextEl: ".swiper-button-next",
     },
 });
+
 swiper2.on("slideChange", function (e) {
     const slides = document.querySelectorAll(".about-swiper .swiper-slide");
     if (exploreBtn != undefined && exploreBtn != null) {
@@ -60,6 +61,24 @@ swiper2.on("slideChange", function (e) {
             slides[swiper2.activeIndex].getAttribute("data-explore-link")
         );
     }
+});
+const swiper3 = new Swiper(".testimonials-swiper", {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 3,
+
+	spaceBetween: 40,
+    // If we need pagination
+    pagination: {
+        el: ".testimonials-main .swiper-pagination",
+		clickable: true
+    },
+
+    // Navigation arrows
+    navigation: {
+        prevEl: ".testimonials-main .testimonial-button-prev",
+        nextEl: ".testimonials-main  .testimonial-button-next",
+    },
 });
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();

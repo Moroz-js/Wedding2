@@ -1,0 +1,197 @@
+.testimonials-main {
+    padding-top: 170px;
+    &__title {
+        font-family: "Anya Tamy";
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 76px;
+        color: $pink-color;
+        text-align: center;
+        margin: 0;
+        &-wrapper {
+            max-width: 536px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+    }
+    &__subtitle {
+        margin: 0;
+        margin-top: 40px;
+        font-family: "Anya Tamy";
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 41px;
+        margin-bottom: 26px;
+        color: $black-color;
+        text-align: center;
+    }
+	.testimonials-navigation-wrapper {
+		max-width: 246px;
+        display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 43px auto 0;
+	}
+	.testimonial-button-prev {
+		height: 36px;
+		width: 36px;
+		max-width: 36px;
+		max-height: 36px;
+		min-width: 36px;
+		min-height: 36px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		border: 1px solid $black-color;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+
+		svg {
+			position: relative;
+			left: -2px;
+			path {
+				filL: $black-color;
+				transition: all 0.3s ease-in-out;
+			}
+		}
+		&:hover {
+			border-color: $pink-color;
+			transition: all 0.3s ease-in-out;
+			background-color: $pink-color;
+            svg path {
+				fill: #fff;
+				transition: all 0.3s ease-in-out;
+			}
+		}
+	}
+	.testimonial-button-next {
+		height: 36px;
+		width: 36px;
+		max-width: 36px;
+		max-height: 36px;
+		min-width: 36px;
+		min-height: 36px;
+		transform: scale(-1, 1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		border: 1px solid $black-color;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+
+		svg {
+			position: relative;
+			left: -2px;
+			path {
+				filL: $black-color;
+				transition: all 0.3s ease-in-out;
+			}
+		}
+		&:hover {
+			border-color: $pink-color;
+			transition: all 0.3s ease-in-out;
+			background-color: $pink-color;
+            svg path {
+				fill: #fff;
+				transition: all 0.3s ease-in-out;
+			}
+		}
+	}
+	.swiper-pagination {
+		position: relative;
+		bottom: 0!important;
+		height: 29px;
+		display: flex;
+		justify-content: center;
+		width: auto!important;
+		margin: 0 60px 0 60px;
+		align-items: center;
+		.swiper-pagination-bullet {
+			margin: 0 4px!important;
+			height: 9px;
+			width: 2px;
+			background: $black-color;
+			transition: height 0.3s ease-in-out;
+			opacity: 1;
+			&-active {
+				height: 29px;
+				transition: height 0.3s ease-in-out;
+			}
+		}
+	}
+	.swiper-button-next, .swiper-button-prev {
+		position: relative;
+		top: auto;
+	}
+}
+.testimonials-slider-wrapper {
+    margin-top: 100px;
+}
+.testimonials-item-wrapper {
+    background: #d9d8dd;
+    border: 1px solid #a6a6a6;
+    /* Тень */
+
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 46px 40px 22px 40px;
+    max-width: 513px;
+    box-sizing: border-box;
+}
+.testimonials-main-item__title {
+    margin: 0;
+    font-family: "Anya Tamy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    color: $black-color;
+}
+.testimonials-main-item__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
+    margin-top: 21px;
+    color: $black-color;
+}
+.testimonials-read-more {
+    margin-top: 200px;
+    display: block;
+
+    span {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 29px;
+        text-transform: uppercase;
+        color: $black-color;
+        transition: all 0.3s ease-in-out;
+    }
+    svg {
+        transition: all 0.3s ease-in-out;
+    }
+    svg path {
+        fill: #464646;
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+        span {
+            color: $pink-color;
+            transition: all 0.3s ease-in-out;
+        }
+        svg path {
+            fill: $pink-color;
+            transition: all 0.3s ease-in-out;
+        }
+        svg {
+            margin-left: 25px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+}

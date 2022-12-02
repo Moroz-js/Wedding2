@@ -39,3 +39,54 @@
         font-family: "Anya Tamy";
     }
 }
+.why {
+	display: flex;
+	padding-left: 150px;
+	margin-top: 200px;
+	position: relative;
+	overflow: hidden;
+	&::after {
+		content: '';
+		background: linear-gradient(270deg, #EDE3DE -5.15%, rgba(237, 227, 222, 0) 100%);
+		top: 0;
+		right: 0;
+		z-index: 1;
+		position: absolute;
+		height: 100%;
+		width: 30%;
+	}
+	gap: 40px;
+	&__text-wrapper {
+		max-width: 514px;
+		margin-top: 20px;
+	}
+	&__title {
+		font-family: 'Anya Tamy';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 36px;
+		line-height: 43px;
+		margin: 0;
+		color: $pink-color;
+	}
+	&__text {
+		margin: 0;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 24px;
+		color: $black-color;
+		margin-top: 40px;
+	}
+	&__btn {
+		display: block;
+		max-width: 210px;
+		margin-top: 60px;
+		box-sizing: border-box;
+	}
+	&__images-wrapper {
+		flex-wrap: nowrap;
+		display: flex;
+		align-items: flex-start;
+		gap: 40px;
+	}
+}

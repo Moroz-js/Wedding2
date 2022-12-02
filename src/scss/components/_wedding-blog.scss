@@ -1,0 +1,63 @@
+.wedding-blog {
+    position: relative;
+    padding-top: 200px;
+	padding-bottom: 200px;
+	&__text-wrapper {
+        max-width: 512px;
+    }
+    &__title {
+        font-family: "Anya Tamy";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 108px;
+        line-height: 128px;
+        text-transform: uppercase;
+        color: $pink-color;
+		margin: 0;
+    }
+	&__text {
+		padding-right: 50px;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 24px;
+		color: $black-color;
+		margin: 0;
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	&-wrapper {
+		display: flex;
+		justify-content: space-between;
+		gap: 40px;
+	}
+	.wedding-blog__images-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 40px;
+		.wedding-blog__images-column:first-child {
+			.wedding-blog__images-item {
+				&:last-child {
+					margin-top: 100px;
+				}
+			}
+		}
+	}
+}
+.wedding-blog__images-title {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 29px;
+	text-transform: uppercase;
+	margin: 0;
+	margin-top: 20px;
+	color: $black-color
+}
+.wedding-btn {
+	display: block;
+	max-width: 183px;
+}
+.wedding-btn span {
+    position: relative;
+    top: 5px;
+}

@@ -1,0 +1,153 @@
+.footer-wrapper {
+	background: #F4EEEA;
+	border: 1px solid #858585;
+	box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+	border-radius: 3px;
+	padding: 40px 30px 40px 40px;
+	display: flex;
+}
+.footer-column {
+	&:nth-child(2) {
+		margin-left: 17%;
+	}
+	&:nth-child(3) {
+		margin-left: 12%;
+	}
+	&:nth-child(4) {
+		margin-left: 43px;
+		margin-left: auto;
+	}
+}
+.footer-contacts__title {
+	font-weight: 700;
+font-size: 36px;
+line-height: 58px;
+/* identical to box height */
+
+text-transform: uppercase;
+margin: 0;
+color: $black-color;
+margin-bottom: 26px;
+}
+.footer-contacts {
+	margin-top: 18px;
+	display: flex;
+	flex-direction: column;
+	font-weight: 700;
+font-size: 21px;
+line-height: 18px;
+/* or 86% */
+
+
+color: #464646;
+span {
+	a {
+		color: #464646;
+    text-decoration: none;
+	}
+	&:last-child {
+		margin-top: 18px;
+	}
+}
+}
+.footer-inst {
+	margin-top: 40px;
+	&__title {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 18px;
+		text-transform: uppercase;
+		color: $black-color;
+		margin: 0;
+	}
+}
+.footer-inst__logo {
+	width: 43px;
+	margin-top: 15px;
+	height: 43px;
+	min-height: 43px;
+	max-height: 43px;
+	max-width: 43px;
+	min-width: 43px;
+	border: 2px solid #B04252;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease-in-out;
+	svg path {
+		fill: $pink-color;
+		transition:all 0.3s ease-in-out;
+
+	}
+	&:hover {
+		transition:all 0.3s ease-in-out;
+		background-color: $pink-color;
+		svg path {
+			fill: #fff;
+			transition:all 0.3s ease-in-out;
+
+		}
+	}
+}
+.wedding-planner {
+	font-weight: 700;
+font-size: 24px;
+line-height: 38px;
+text-transform: uppercase;
+margin-top: 40px;
+color: #464646;
+}
+.wedding-planner-text {
+	font-weight: 400;
+font-size: 21px;
+line-height: 26px;
+/* or 124% */
+
+max-width: 433px;
+color: #464646;
+}
+.features {
+	margin-top: 80px;
+	&__title {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 58px;
+		text-transform: uppercase;
+		margin: 0;
+		color: $black-color;
+	}
+	&__item {
+		width: 51px;
+		height: 51px;
+		border-radius: 50%;
+		background-color: #D9D9D9;
+	}
+}
+.footer-nav, .policy-nav {
+	margin-top: 30px;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 10px;
+	&__link {
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 35px;
+		text-transform: capitalize;
+
+		color: #464646;
+		&::before {
+			bottom: 2px;
+		}
+	}
+}
+
+.policy-nav {
+	margin-top: 287px;
+	&__link {
+		font-weight: 400;
+			font-size: 18px;
+			line-height: 24px;
+	}
+}

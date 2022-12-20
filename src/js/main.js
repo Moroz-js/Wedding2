@@ -4,6 +4,11 @@ let welcome = document.querySelector(".promo");
 let cookieAlert = document.querySelector(".cookie-alert");
 let cookieBtn = cookieAlert.querySelector(".btn");
 let exploreBtn = document.querySelector(".swiper-pagination-explore-btn");
+let storiesModal = document.querySelector('.stories-modal');
+let storiesItems = document.querySelectorAll('.stories-image');
+let body = document.body;
+let html = document.querySelector('html');
+let closeStoriesModalBtn = document.querySelector('.stories-modal-close')
 if (mouseScroll != undefined && mouseScroll != null) {
     mouseScroll.addEventListener("click", (e) => {
         e.preventDefault();
@@ -30,6 +35,7 @@ const swiper = new Swiper(".promo-swiper", {
     // If we need pagination
     pagination: {
         el: ".swiper-pagination",
+		clickable: true,
     },
 
     // Navigation arrows
@@ -125,3 +131,98 @@ if (cookie_consent != "") {
     cookieAlert.style.display = "block";
 }
 cookieBtn.addEventListener("click", acceptCookieConsent);
+
+function openStoriesModal(item) {
+	storiesModal.classList.add('open');
+	let img = storiesModal.querySelector('.stories-modal-image');
+	img.setAttribute('src', item.getAttribute('data-modal-image'))
+	body.classList.add('body-lock');
+	html.classList.add('body-lock')
+}
+
+function closeStoriesModal() {
+	storiesModal.classList.remove('open');
+	body.classList.remove('body-lock');
+	html.classList.remove('body-lock')
+}
+function addEventOnModalImage() {
+	const img = storiesModal.querySelector('.stories-modal-image');
+	img.addEventListener('click', () => {
+		closeStoriesModal()
+	})
+	img.classList.add('chosen')
+}
+if(storiesModal != undefined && storiesModal != null) {
+	storiesItems.forEach((item) => {
+		item.addEventListener('click', () => {
+			openStoriesModal(item)
+			addEventOnModalImage()
+		})
+	})
+	closeStoriesModalBtn.addEventListener('click', () => {
+		closeStoriesModal()
+	})
+	storiesModal.addEventListener('click', (e) => {
+		e.target == storiesModal ? closeStoriesModal() : ''
+	})
+}
+
+const serviceSwiper = document.querySelector('.service-swiper');
+if(serviceSwiper != undefined && serviceSwiper != null) {
+
+	const options = {
+		// родитель целевого элемента - область просмотра
+		root: null,
+		// без отступов
+		rootMargin: '0px',
+		// процент пересечения - половина изображения
+		threshold: 0.7
+	}
+	const observer = new IntersectionObserver((entries, observer) => {
+		// для каждой записи-целевого элемента
+		entries.forEach(entry => {
+			// если элемент является наблюдаемым
+			if (entry.isIntersecting) {
+				serviceSwiper.classList.add('active')
+				animateCurrentSlide(document.querySelectorAll('.service-swiper .swiper-slide')[swiper.activeIndex])
+
+				// прекращаем наблюдение
+			} else {
+				serviceSwiper.classList.remove('active')
+			}
+		})
+	}, options)
+	function animateCurrentSlide(slide) {
+		let items = slide.querySelectorAll('.service-swiper-slide__title, .service-swiper-slide__subtitle, .service-swiper-slide__text-heading-title, .service-swiper-slide__text')
+		items.forEach((item) => {
+			item.classList.add('active')
+		})
+	}
+	let target = document.querySelector('.service-swiper')
+	observer.observe(target)
+	const swiper4 = new Swiper(".service-swiper", {
+		// Optional parameters
+		loop: true,
+		slidesPerView: 1,
+
+		spaceBetween: 0,
+		// If we need pagination
+		pagination: {
+			el: ".service-swiper .swiper-pagination",
+			clickable: true
+		},
+		effect: 'fade',
+		// Navigation arrows
+		navigation: {
+			prevEl: ".service-swiper .swiper-button-prev",
+			nextEl: ".service-swiper  .swiper-button-next",
+		},
+
+	});
+	swiper4.on('slideChange', function () {
+		document.querySelectorAll('.service-swiper-slide__title, .service-swiper-slide__subtitle, .service-swiper-slide__text-heading-title, .service-swiper-slide__text').forEach((item) => {
+			item.classList.remove('active')
+		})
+		animateCurrentSlide(document.querySelectorAll('.service-swiper .swiper-slide')[swiper4.activeIndex])
+	});
+}

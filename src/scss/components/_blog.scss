@@ -81,6 +81,20 @@
     align-items: center;
     border: 2px solid #464646;
     border-radius: 50%;
+	transition: all 0.3s ease-in-out;
+	svg path {
+		transition: all 0.3s ease-in-out;
+		fill: #464646;
+	}
+	&:hover {
+		transition: all 0.3s ease-in-out;
+		border: 2px solid $pink-color;
+		background-color: $pink-color;
+		svg path {
+			fill: #fff;
+			transition: all 0.3s ease-in-out;
+		}
+	}
 }
 .arrow-prev.pagination-blog-arrow {
     margin-right: 20px;

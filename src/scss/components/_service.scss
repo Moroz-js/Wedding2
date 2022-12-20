@@ -34,7 +34,6 @@
         }
     }
 
-    // TODO read more hover
     .service-read-more {
         display: flex;
         align-items: center;
@@ -47,9 +46,21 @@
         line-height: 28px;
 		cursor: pointer;
         color: $black-color;
+		transition: all 0.3s ease-in-out;
         svg {
             margin-left: 10px;
+			path {}
+			stroke: $black-color;
+			transition: all 0.3s ease-in-out;
         }
+		&:hover {
+			transition: all 0.3s ease-in-out;
+			color: $pink-color;
+			svg path {
+				stroke: $pink-color;
+				transition: all 0.3s ease-in-out;
+			}
+		}
     }
     &-item__text-title {
         font-family: "Anya Tamy";
@@ -78,7 +89,7 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-
+		margin-top: 220px;
         &-text {
             max-width: 513px;
 			position: relative;
@@ -127,8 +138,11 @@
                 color: $white-color;
                 transition: all 0.3s ease-in-out;
 				cursor: pointer	;
+				&:hover {
+					transform: translateY(-5px);
+					filter: drop-shadow(0px 7px 15px rgba(0, 0, 0, 0.2));
+				}
             }
-
         }
     }
 }
@@ -140,8 +154,6 @@
     justify-content: center;
     background: #f4eeea;
     border: 1px solid #858585;
-    /* Тень */
-
     box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     &-text {
@@ -152,4 +164,203 @@
         color: $black-color;
         margin-right: 50px;
     }
+}
+.service-swiper {
+	position: relative;
+	width: calc(100% - 150px * 2);
+	margin: 0 auto;
+	transition: width 0.3s ease-in-out;
+	height: 728px;
+	filter: drop-shadow(0px 7px 15px rgba(0, 0, 0, 0.1));
+	border-radius: 20px;
+
+	&.active {
+		width: 100%;
+		transition: width 0.3s ease-in-out;
+	}
+	.swiper-slide {
+		padding-top: 70px;
+		padding-left: 40px;
+		padding-bottom: 100px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		box-sizing: border-box;
+		&::before {
+			position: absolute;
+			width: 100%;
+			z-index: 2;
+			content: '';
+			background: linear-gradient(272.14deg, rgba(0, 0, 0, 0) 19.91%, rgba(0, 0, 0, 0.7) 107.13%);
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+	}
+	.service-swiper-slide__title-wrapper {
+		position: relative;
+		z-index: 5;
+	}
+	.service-swiper-slide__title {
+		font-family: 'Anya Tamy';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 48px;
+		line-height: 57px;
+		margin: 0;
+		color: #FAFAFA;
+		transform: translateY(40px);
+		transition: all 0.6s ease-in-out;
+		transition-delay: 0.3s;
+		opacity: 0;
+		&.active {
+			transform: translateY(0);
+			transition: all 0.6s ease-in-out;
+			opacity: 1;
+		}
+	}
+	.service-swiper-slide__subtitle {
+		font-family: 'Anya Tamy';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 36px;
+		line-height: 43px;
+		color: #F4EEEA;
+		margin: 0;
+		margin-top: 40px;
+		transform: translateY(40px);
+		transition: all 0.6s ease-in-out;
+		transition-delay: 0.6s;
+		opacity: 0;
+		&.active {
+			transform: translateY(0);
+			transition: all 0.6s ease-in-out;
+			transition-delay: 0.6s;
+			opacity: 1;
+		}
+	}
+	.service-swiper-slide__text-wrapper {
+		position: relative;
+		z-index: 5;
+		max-width: 33%;
+	}
+	.service-swiper-slide__text-heading {
+		margin: 0;
+		font-family: 'Anya Tamy';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 38px;
+		display: flex;
+		align-items: center;
+
+		color: #FAFAFA;
+		&-title {
+			transform: translateY(40px);
+			transition: all 0.6s ease-in-out;
+			transition-delay: 1s;
+			opacity: 0;
+			&.active {
+				transform: translateY(0);
+				transition: all 0.6s ease-in-out;
+				transition-delay: 1s;
+				opacity: 1;
+			}
+		}
+	}
+	.service-swiper-slide__text {
+		margin: 0;
+		margin-top: 12px;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 21px;
+		line-height: 27px;
+		color: #FAFAFA;
+		transform: translateY(40px);
+		transition: all 0.6s ease-in-out;
+		transition-delay: 1.2s;
+		opacity: 0;
+		&.active {
+			transform: translateY(0);
+			transition: all 0.6s ease-in-out;
+			transition-delay: 1.2s;
+			opacity: 1;
+		}
+	}
+	.swiper-navigation {
+		position: relative;
+		left: auto;
+		top: -2px;
+		margin-left: 70px;
+		display: flex;
+		.swiper-button-next {
+			min-width: 22px;
+			min-height: 22px;
+			max-width: 22px;
+			max-height: 22px;
+			border-radius: 50%;
+			border: 1px solid #f4eeea;
+			top: 50%;
+			transform: translateY(-50%);
+			position: absolute;
+			right: -32px;
+			margin: 0;
+			&::after {
+				content: "";
+				background-image: url("../../img/arrow-next.svg");
+				background-size: contain;
+				height: 11px;
+				width: 5px;
+			}
+		}
+		.swiper-button-prev {
+			min-width: 22px;
+			min-height: 22px;
+			max-width: 22px;
+			max-height: 22px;
+			border-radius: 50%;
+			border: 1px solid #f4eeea;
+			top: 50%;
+			transform: translateY(-50%);
+			position: absolute;
+			left: -32px;
+			margin: 0;
+			&::after {
+				content: "";
+				background-image: url("../../img/arrow-next.svg");
+				background-size: contain;
+				height: 11px;
+				width: 5px;
+				transform: scale(-1, 1)
+			}
+		}
+		.swiper-pagination {
+			position: relative;
+			display: flex;
+			align-items: center;
+			bottom: 0;
+			height: 35px;
+			.swiper-pagination-bullet {
+				width: 1px;
+				height: 11px;
+				opacity: 1;
+				cursor: pointer;
+				transition: height 0.3s ease-in-out;
+				background: #f4eeea;
+				margin: 0 4px !important;
+				& {
+					&-active {
+						height: 35px;
+						transition: height 0.3s ease-in-out;
+					}
+
+				}
+				&:not(.swiper-pagination-bullet-active):hover {
+					height: 20px;
+					transition: height 0.3s ease-in-out;
+				}
+			}
+		}
+	}
 }

@@ -122,6 +122,10 @@
 				height: 29px;
 				transition: height 0.3s ease-in-out;
 			}
+			&:not(.swiper-pagination-bullet-active):hover {
+				height: 20px;
+				transition: height 0.3s ease-in-out;
+			}
 		}
 	}
 	.swiper-button-next, .swiper-button-prev {

@@ -21,11 +21,18 @@ if (mouseScroll != undefined && mouseScroll != null) {
         });
     });
 }
+function openMenu() {
+	burger.classList.toggle("active");
+	document.body.classList.toggle("body-lock");
+	document.querySelector('.header').classList.toggle('active')
+	document.querySelector("html").classList.toggle("body-lock");
+	document.querySelector('.mobile-menu__title').classList.toggle('active')
+	document.querySelector('.mobile-menu').classList.toggle('active')
+
+}
 
 burger.addEventListener("click", () => {
-    burger.classList.toggle("active");
-    document.body.classList.toggle("body-lock");
-    document.querySelector("html").classList.toggle("body-lock");
+	openMenu()
 });
 
 const swiper = new Swiper(".promo-swiper", {
@@ -37,6 +44,9 @@ const swiper = new Swiper(".promo-swiper", {
         el: ".swiper-pagination",
 		clickable: true,
     },
+	autoplay: {
+		delay: 6000,
+	},
 
     // Navigation arrows
     navigation: {

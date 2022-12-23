@@ -5,14 +5,17 @@
     .container {
         position: relative;
         z-index: 1;
+		display: grid;
+		grid-template-columns: 513px auto;
+		grid-column-gap: 140px;
     }
 }
-.background-text {
+ .background-text {
     font-family: "Best Rock";
     font-style: normal;
     font-weight: 400;
-    font-size: 397.538px;
-    line-height: 773px;
+    font-size: 20vw;
+    line-height: 30vw;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -22,4 +25,81 @@
     left: 50%;
     z-index: 0;
     white-space: nowrap;
+}
+.me-image {
+	height: 100%;
+	outline: 10px solid #FAFAFA;
+		outline-offset: -9px;
+		border-radius: 5px;
+}
+@media(max-width: 1700px) {
+	.me .container {
+		grid-column-gap: 50px;
+	}
+}
+@media(max-width: 1580px) {
+	.me {
+		padding: 100px 0;
+	}
+}
+@media(max-width: 1440px) {
+	.me {
+		margin-top: 150px;
+	}
+	.me-text__descr {
+		font-size: 18px;
+		line-height: 26px;
+	}
+	.me-text__descr:not(:last-of-type) {
+		margin-bottom: 20px;
+	}
+	.me-button {
+		max-width: 196px;
+		margin-top: 24px;
+	}
+	.me-image {
+		max-height: 463px;
+	}
+	.me .container {
+		grid-template-columns: 396px 1fr;
+	}
+	.main-me .background-text {
+		font-size: 22vw;
+	}
+}
+@media(max-width: 1280px) {
+	.me .container {
+		-ms-grid-columns: 321px 1fr;
+		grid-template-columns: 321px 1fr;
+	}
+	.me-image {
+		max-height: 375px;
+	}
+	.about .mission-descr {
+		font-size: 16px;
+		line-height: 25px;
+	}
+	.about .mission-text__wrapper {
+		padding: 78px 0 120px 0;
+	}
+	.mission {
+		margin-bottom: 50px;
+	}
+	.about .about-swiper .swiper-navigation .swiper-pagination-explore-btn {
+		right: -280px;
+	}
+	.about .about-swiper__descr {
+		font-size: 18px;
+		line-height: 24px;
+		max-width: 346px;
+	}
+}
+@media(max-width: 1024px) {
+	.promo-swiper__text {
+		padding-left: 81px;
+	}
+	.about .about-swiper .swiper-navigation {
+		left: 115px;
+	}
+
 }

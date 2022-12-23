@@ -1,153 +1,206 @@
 .footer-wrapper {
-	background: #F4EEEA;
-	border: 1px solid #858585;
-	box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
-	border-radius: 3px;
-	padding: 40px 30px 40px 40px;
-	display: flex;
+    background: #f4eeea;
+    border: 1px solid #858585;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    padding: 40px 30px 40px 40px;
+    display: flex;
+	display: grid;
+	grid-template-columns: 14.4fr 15.45fr 9.94fr 4.13fr;
 }
-.footer-column {
-	&:nth-child(2) {
-		margin-left: 17%;
-	}
-	&:nth-child(3) {
-		margin-left: 12%;
-	}
-	&:nth-child(4) {
-		margin-left: 43px;
-		margin-left: auto;
-	}
-}
-.footer-contacts__title {
-	font-weight: 700;
-font-size: 36px;
-line-height: 58px;
-/* identical to box height */
 
-text-transform: uppercase;
-margin: 0;
-color: $black-color;
-margin-bottom: 26px;
+
+.footer-contacts__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 58px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+    margin: 0;
+    color: $black-color;
+    margin-bottom: 26px;
 }
 .footer-contacts {
-	margin-top: 18px;
-	display: flex;
-	flex-direction: column;
-	font-weight: 700;
-font-size: 21px;
-line-height: 18px;
-/* or 86% */
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 18px;
+    /* or 86% */
 
-
-color: #464646;
-span {
-	a {
-		color: #464646;
-    text-decoration: none;
-	}
-	&:last-child {
-		margin-top: 18px;
-	}
-}
+    color: #464646;
+    span {
+        a {
+            color: #464646;
+            text-decoration: none;
+        }
+        &:last-child {
+            margin-top: 18px;
+        }
+    }
 }
 .footer-inst {
-	margin-top: 40px;
-	&__title {
-		font-weight: 700;
-		font-size: 18px;
-		line-height: 18px;
-		text-transform: uppercase;
-		color: $black-color;
-		margin: 0;
-	}
+    margin-top: 40px;
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 18px;
+        text-transform: uppercase;
+        color: $black-color;
+        margin: 0;
+    }
 }
 .footer-inst__logo {
-	width: 43px;
-	margin-top: 15px;
-	height: 43px;
-	min-height: 43px;
-	max-height: 43px;
-	max-width: 43px;
-	min-width: 43px;
-	border: 2px solid #B04252;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: all 0.3s ease-in-out;
-	svg path {
-		fill: $pink-color;
-		transition:all 0.3s ease-in-out;
-
-	}
-	&:hover {
-		transition:all 0.3s ease-in-out;
-		background-color: $pink-color;
-		svg path {
-			fill: #fff;
-			transition:all 0.3s ease-in-out;
-
-		}
-	}
+    width: 43px;
+    margin-top: 15px;
+    height: 43px;
+    min-height: 43px;
+    max-height: 43px;
+    max-width: 43px;
+    min-width: 43px;
+    border: 2px solid #b04252;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    svg path {
+        fill: $pink-color;
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+        transition: all 0.3s ease-in-out;
+        background-color: $pink-color;
+        svg path {
+            fill: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+    }
 }
 .wedding-planner {
-	font-weight: 700;
-font-size: 24px;
-line-height: 38px;
-text-transform: uppercase;
-margin-top: 40px;
-color: #464646;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    color: #464646;
 }
 .wedding-planner-text {
-	font-weight: 400;
-font-size: 21px;
-line-height: 26px;
-/* or 124% */
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    /* or 124% */
 
-max-width: 433px;
-color: #464646;
+    max-width: 433px;
+    color: #464646;
 }
 .features {
-	margin-top: 80px;
-	&__title {
-		font-weight: 700;
-		font-size: 36px;
-		line-height: 58px;
-		text-transform: uppercase;
-		margin: 0;
-		color: $black-color;
-	}
-	&__item {
-		width: 51px;
-		height: 51px;
-		border-radius: 50%;
-		background-color: #D9D9D9;
-	}
+    margin-top: 80px;
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 58px;
+        text-transform: uppercase;
+        margin: 0;
+        color: $black-color;
+    }
+    &__item {
+        width: 51px;
+        height: 51px;
+        border-radius: 50%;
+        background-color: #d9d9d9;
+    }
 }
-.footer-nav, .policy-nav {
-	margin-top: 30px;
-	display: flex;
-	align-items: flex-start;
-	flex-direction: column;
-	gap: 10px;
-	&__link {
-		font-weight: 700;
-		font-size: 22px;
-		line-height: 35px;
-		text-transform: capitalize;
+.footer-nav,
+.policy-nav {
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    &__link {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 35px;
+        text-transform: capitalize;
 
-		color: #464646;
-		&::before {
-			bottom: 2px;
-		}
-	}
+        color: #464646;
+        &::before {
+            bottom: 2px;
+        }
+    }
 }
 
 .policy-nav {
-	margin-top: 287px;
-	&__link {
-		font-weight: 400;
-			font-size: 18px;
-			line-height: 24px;
+    margin-top: 287px;
+    &__link {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+@media(max-width: 1440px) {
+	.wedding-planner {
+		max-width: 300px;
+		margin-bottom: 20px;
+	}
+	.wedding-planner-text {
+		font-size: 18px;
+line-height: 30px;
+margin-bottom: 0;
+	}
+	.features {
+		margin-top: 53px;
+	}
+	.footer-nav, .policy-nav {
+		margin-top: 40px;
+	}
+	.footer-nav__link, .policy-nav__link {
+		font-size: 18px;
+line-height: 29px;
+	}
+	.policy-nav {
+		margin-top: 287px;
+	}
+	.footer-wrapper {
+		grid-template-columns: 14.4fr 15.45fr 8.94fr 5.13fr;
+	}
+}
+@media(max-width: 1280px) {
+	.footer-contacts {
+		font-size: 18px;
+    line-height: 16px;
+	}
+	.footer-contacts__title {
+		font-size: 24px;
+line-height: 38px;
+margin-bottom: 46px;
+	}
+	.footer-inst {
+		margin-top: 43px;
+	}
+	.wedding-planner {
+		font-size: 18px;
+line-height: 29px;
+margin-bottom: 67px;
+	}
+	.features {
+		margin-top: 65px;
+	}
+	.features__title {
+		font-size: 24px;
+line-height: 38px;
+	}
+	.policy-nav__link {
+		font-size: 16px;
+line-height: 24px;
+	}
+
+}
+@media(max-width: 1160px) {
+	.footer-wrapper {
+		grid-template-columns: 10.4fr 14.45fr 7.94fr 5.13fr;
 	}
 }

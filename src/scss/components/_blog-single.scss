@@ -116,3 +116,119 @@
     color: $black-color;
     margin-top: 23px;
 }
+@media(max-width: 1720px) {
+	.wide-container {
+		padding: 0 320px;
+	}
+	.blog-single-breadcrumbs {
+		position: relative;
+		left: -165px;
+	}
+}
+@media(max-width: 1550px) {
+	.blog-single-header h1 {
+		font-size: 48px;
+		line-height: 57px;
+	}
+}
+@media(max-width: 1440px) {
+	.blog-single-breadcrumbs {
+		position: relative;
+		left: -200px;
+	}
+	.blog-single-header {
+		background: #d9d8dd;
+		padding: 70px 0 150px 0;
+	}
+	.blog-single-header h1 {
+		font-size: 48px;
+		line-height: 57px;
+		margin-top: 78px;
+	}
+	.blog-single-image {
+		top: -50px;
+		width: calc(100% - 350px);
+	}
+	.blog-single-content {
+		margin-top: 50px;
+		.wide-container {
+			padding: 0 250px;
+		}
+	}
+	.blog-read-more {
+		margin-top: 150px;
+	}
+	.blog-read-more__item-title {
+		margin-top: 20px;
+		font-family: "Anya Tamy";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 28px;
+		color: #464646;
+		margin-bottom: 0;
+	}
+	.blog-read-more__item-descr {
+		font-size: 16px;
+line-height: 23px;
+margin-top: 20px;
+margin-bottom: 0;
+	}
+	.blog-single {
+		padding-bottom: 150px;
+	}
+}
+@media(max-width: 1280px) {
+	.wide-container {
+		padding: 0 200px;
+	}
+	.blog-single-breadcrumbs {
+		left: -80px;
+	}
+	.blog-single-header h1 {
+		max-width: 630px;
+	}
+	.blog-single-image {
+		top: -50px;
+		width: calc(100% - 280px);
+	}
+	.blog-single-header h1 {
+		margin-top: 93px;
+	}
+	.blog-single-content .wide-container {
+		padding: 0 200px;
+	}
+	.blog-single-text {
+		font-size: 18px;
+		line-height: 29px;
+	}
+	.blog-single-text:not(:last-of-type) {
+		margin-bottom: 20px;
+	}
+	.blog-read-more__title {
+		font-size: 32px;
+		line-height: 38px;
+	}
+	.blog-read-more__items-wrapper {
+		margin-top: 21px;
+		grid-column-gap: 20px;
+	}
+	.blog-read-more__item-title {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.blog-read-more__item-descr {
+		font-size: 14px;
+		line-height: 18px;
+		margin-top: 5px;
+		margin-bottom: 0;
+	}
+	.blog-read-more__item-title {
+		margin-top: 10px;
+	}
+	.blog-single-header h1 {
+		font-size: 44px;
+		line-height: 50px;
+		margin-top: 78px;
+	}
+}

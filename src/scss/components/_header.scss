@@ -5,7 +5,7 @@
     top: 0;
     backdrop-filter: blur(12px);
     left: 0;
-    z-index: 5;
+    z-index: 50;
     &-wrapper {
         display: flex;
         align-items: center;
@@ -113,6 +113,9 @@
     .logo-mobile {
         display: none;
     }
+	.mobile-menu__title {
+		display: none;
+	}
 }
 @media (max-width: 700px) {
     .logo-mobile {
@@ -121,13 +124,110 @@
     .logo {
         display: none;
     }
+	.mobile-menu__title {
+		display: inline;
+	}
     .header {
         height: 50px;
-        .container {
+		transition: all 0.3s ease-in-out;
+
+		.container {
             height: 100%;
         }
         &-wrapper {
             height: 100%;
         }
+		&.active {
+			box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+			transition: all 0.3s ease-in-out;
+		}
     }
+	.mobile-menu__title {
+		font-family: 'Anya Tamy';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 28px;
+		opacity: 0;
+		color: $pink-color;
+		position: absolute;
+		top: 52%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: all 0.3s ease-in-out;
+		&.active {
+			opacity: 1;
+			transition: all 0.3s ease-in-out;
+		}
+	}
+	.mobile-menu {
+		position: fixed;
+		top: 50px;
+		left: 0;
+		height: 100vh;
+		width: 100%;
+		display: flex;
+		z-index: 40;
+		background: #F4EEEA;
+		align-items: center;
+		flex-direction: column;
+		transform: translateY(-100%);
+		transition: all 0.3s ease-in-out;
+		&.active {
+			transform: translateY(0);
+			transition: all 0.3s ease-in-out;
+		}
+		&-wrapper {
+			display: flex;
+			flex-direction: column;
+			flex-basis: 95%;
+			justify-content: center;
+			height: 100%;
+		}
+		&-nav {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			gap: 10px;
+			&-link {
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 29px;
+				/* identical to box height */
+
+				color: #464646;
+				&:before {
+					bottom: 3px!important;
+				}
+			}
+		}
+		&-delimiter {
+			width: 100%;
+			max-width: 195px;
+			margin-top: 20px;
+			height: 1px;
+			background: #A0A0A0;
+			margin-bottom: 20px;
+		}
+		&-contacts {
+			display: flex;
+			text-align: center;
+			flex-direction: column;
+			align-items: center;
+			&-link {
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 22px;
+				text-align: center;
+				color: #464646;
+				&:before {
+					bottom: 3px!important;
+				}
+			}
+		}
+	}
 }
+
+
+

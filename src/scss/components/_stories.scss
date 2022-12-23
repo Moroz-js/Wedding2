@@ -27,4 +27,55 @@
             margin-bottom: 0;
         }
     }
+	.quote q::after {
+		right: -60px;
+	}
+}
+@media(max-width: 1440px) {
+	.stories {
+		padding: 150px 0 150px 0;
+		.quote q {
+			font-size: 24px;
+			line-height: 38px;
+		}
+		.quote q::before {
+			content: "";
+			left: -30px;
+			top: 0;
+			background: url(../../img/quoute-before.svg);
+			width: 24px;
+			height: 16px;
+			position: absolute;
+			background-size: cover;
+		}
+		 .quote q::after {
+			right: -50px;
+			width: 24px;
+			height: 16px;
+			position: absolute;
+			background-size: cover;
+		}
+		.quote-image {
+			margin-top: 50px;
+		}
+		.stories-items__wrapper {
+			margin-top: 150px;
+		}
+		.stories-item__title {
+			margin-top: 20px;
+			font-size: 24px;
+			line-height: 28px;
+		}
+	}
+}
+@media(max-width: 1280px) {
+
+	
+	.stories-item__title {
+		font-size: 21px;
+		line-height: 25px;
+	}
+	.stories-items__wrapper {
+		grid-column-gap: 20px;
+	}
 }

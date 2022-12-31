@@ -312,12 +312,103 @@
 		line-height: 47px;
 		margin-bottom: 20px;
 	}
-	.me-text__descr:not(:last-of-type) {
+	.me-text__descr {
 		font-size: 16px;
 line-height: 26px;
 	}
 	.me .container {
 		grid-column-gap: 35px;
 	}
-	
+
+}
+@media(max-width: 992px) {
+	.about .quote q {
+		font-size: 21px;
+		line-height: 30px;
+	}
+	.about .quote-image {
+		margin-top: 40px;
+	}
+	.about .quote q {
+
+		max-width: 84%;
+	}
+	.mission-title {
+		font-size: 36px;
+line-height: 43px;
+margin-bottom: 40px;
+	}
+	.about .mission .mission-text__wrapper {
+		padding: 78px 0 170px 0;
+	}
+	.about .mission {
+		margin-bottom: 15px;
+	}
+	.about .swiper-slide {
+		background-size: cover;
+		background-position: center center;
+	}
+	.promo-swiper__text .about-swiper__title {
+		font-size: 32px;
+		line-height: 51px;
+		margin-bottom: 20px;
+	}
+	.about .about-swiper__descr {
+		font-size: 16px;
+		line-height: 21px;
+	}
+}
+@media(max-width: 700px) {
+	.about .quote q {
+		font-size: 17px;
+		line-height: 24px;
+	}
+	.about .quote-image {
+		margin-top: 40px;
+	}
+	.about .quote q {
+
+		max-width: 84%;
+	}
+	.quote q::before {
+		content: "";
+		left: -20px;
+		top: 0;
+		background: url(../../img/quoute-before.svg);
+		width: 20px;
+		height: 13px;
+		position: absolute;
+		background-size: contain;
+	}
+	.quote q::after {
+		content: "";
+		right: -20px;
+		bottom: 0;
+		background: url(../../img/quoute-before.svg);
+		width: 20px;
+		height: 13px;
+		position: absolute;
+		background-size: contain;
+	}
+	.about {
+		padding-top: 100px;
+	}
+	.about .quote-image {
+		margin-top: 20px;
+	}
+	.about .me {
+		margin-top: 100px;
+	}
+	.about .mission-image {
+		width: 130%;
+		min-width: 130%;
+		top: 60px;
+	}
+	.about .mission {
+		margin-top: 0;
+	}
+	.about .mission .mission-text__wrapper {
+		padding: 78px 0 85px 0;
+	}
+
 }

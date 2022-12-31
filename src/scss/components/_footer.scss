@@ -204,3 +204,9 @@ line-height: 24px;
 		grid-template-columns: 10.4fr 14.45fr 7.94fr 5.13fr;
 	}
 }
+@media(max-width: 992px) {
+	.footer {
+		display: none;
+	}
+}
+// TODO footer  adaptive

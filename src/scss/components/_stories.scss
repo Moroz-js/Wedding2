@@ -70,12 +70,53 @@
 }
 @media(max-width: 1280px) {
 
-	
+
 	.stories-item__title {
 		font-size: 21px;
 		line-height: 25px;
 	}
 	.stories-items__wrapper {
 		grid-column-gap: 20px;
+	}
+}
+@media(max-width: 992px) {
+	.stories .quote q {
+		font-size: 21px;
+		line-height: 30px;
+		max-width: 90%;
+	}
+	.stories .quote-image {
+		margin-top: 40px;
+	}
+	.stories {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	.stories .quote q {
+		font-size: 17px;
+line-height: 24px;
+		max-width: 90%;
+	}
+	.stories .stories-items__wrapper {
+		grid-template-columns: 1fr 1fr;
+		grid-row-gap: 50px;
+	}
+	.stories .stories-item__title {
+		font-size: 21px;
+		line-height: 25px;
+	}
+}
+@media(max-width: 700px) {
+	.stories .stories-items__wrapper {
+		margin-top: 100px;
+		grid-template-columns: 1fr;
+		place-items: center;
+		grid-row-gap: 40px;
+		grid-column-gap: 0;
+	}
+	.stories .quote q {
+		font-size: 17px;
+		line-height: 24px;
+		max-width: 200px;
 	}
 }

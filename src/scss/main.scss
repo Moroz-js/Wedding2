@@ -88,7 +88,13 @@
         border: 1px solid $pink-color;
     }
 }
-
+@media(max-width: 700px) {
+	.btn {
+		font-size: 19px;
+		line-height: 26px;
+		padding: 12px 20px 12px 30px;
+	}
+}
 #mouse-scroll {
     display: block;
 }

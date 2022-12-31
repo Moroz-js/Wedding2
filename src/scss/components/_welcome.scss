@@ -16,6 +16,7 @@
     transition: all 0.3s ease-in-out;
 	outline: 10px solid #FAFAFA;
 	outline-offset: -9px;
+	border-radius: 5px;
     &:hover {
         transition: all 0.3s ease-in-out;
 		filter: drop-shadow(0px 7px 15px rgba(0, 0, 0, 0.1));
@@ -164,5 +165,126 @@ line-height: 38px;
 	}
 	.why-image {
 		max-width: 273px;
+	}
+}
+@media(max-width: 992px) {
+	.welcome .background-text {
+		top: 70px;
+		font-size: 25vw;
+	}
+	.welcome .quote q {
+		font-size: 21px;
+		line-height: 30px;
+	}
+	.welcome__wrapper {
+		gap: 50px;
+		flex-direction: column;
+		a {
+			width: 100%;
+			img {
+				width: 100%;
+				max-height: 315px;
+			}
+		}
+	}
+	.welcome__item-title {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	.why {
+		flex-direction: column;
+		padding-left: 42px;
+		align-items: center;
+		text-align: center;
+		&__text-wrapper {
+			gap: 50px;
+		}
+		&__btn {
+			margin: 40px auto 0;
+		}
+		&__images-wrapper {
+			align-self: flex-start;
+			max-width: 70%;
+			img {
+				max-width: 50%;
+			}
+		}
+		&::after {
+			max-height: 290px;
+			bottom: 0;
+			top: auto;
+		}
+	}
+}
+@media(max-width: 755px) {
+	.welcome .quote q {
+		max-width: 80%;
+	}
+}
+@media(max-width: 700px) {
+	.why {
+		padding-left: 15px;
+	}
+	.why {
+		margin-top: 100px;
+	}
+	.why__btn {
+		max-width: 165px;
+	}
+}
+@media(max-width: 520px) {
+	.welcome {
+		padding-top: 100px;
+	}
+	.welcome .quote q {
+		max-width: 85%;
+		font-size: 17px;
+		line-height: 24px;
+	}
+	.quote q::before {
+		content: "";
+		left: -20px;
+		top: 0;
+		background: url(../../img/quoute-before.svg);
+		width: 20px;
+		height: 13px;
+		position: absolute;
+		background-size: contain;
+	}
+	.quote q::after {
+		content: "";
+		right: -20px;
+		bottom: 0;
+		background: url(../../img/quoute-before.svg);
+		width: 20px;
+		height: 13px;
+		position: absolute;
+		background-size: contain;
+	}
+	.welcome__wrapper {
+		margin-top: 100px;
+		gap: 40px;
+	}
+	.why__title {
+		font-size: 31px;
+		line-height: 37px;
+	}
+	.why__text {
+		margin-top: 20px;
+		&-wrapper {
+			padding-right: 15px;
+		}
+	}
+	.why::after {
+		max-height: 180px;
+		bottom: 0;
+		top: auto;
+	}
+
+
+}
+@media(max-width: 440px) {
+	.why__images-wrapper img {
+		max-width: 63%;
 	}
 }

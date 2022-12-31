@@ -9,6 +9,7 @@ let storiesItems = document.querySelectorAll('.stories-image');
 let body = document.body;
 let html = document.querySelector('html');
 let closeStoriesModalBtn = document.querySelector('.stories-modal-close')
+let blogFilterBtn = document.querySelector('.filter__title-wrapper');
 if (mouseScroll != undefined && mouseScroll != null) {
     mouseScroll.addEventListener("click", (e) => {
         e.preventDefault();
@@ -81,7 +82,7 @@ swiper2.on("slideChange", function (e) {
 const swiper3 = new Swiper(".testimonials-swiper", {
     // Optional parameters
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 1,
 
 	spaceBetween: 40,
     // If we need pagination
@@ -89,6 +90,13 @@ const swiper3 = new Swiper(".testimonials-swiper", {
         el: ".testimonials-main .swiper-pagination",
 		clickable: true
     },
+	breakpoints: {
+		992: {
+			slidesPerView: 3,
+
+			spaceBetween: 40,
+		}
+	},
 
     // Navigation arrows
     navigation: {
@@ -140,7 +148,10 @@ if (cookie_consent != "") {
 } else {
     cookieAlert.style.display = "block";
 }
-cookieBtn.addEventListener("click", acceptCookieConsent);
+cookieBtn.addEventListener("click", (e) => {
+	e.preventDefault();
+	acceptCookieConsent()
+});
 
 function openStoriesModal(item) {
 	storiesModal.classList.add('open');
@@ -235,4 +246,11 @@ if(serviceSwiper != undefined && serviceSwiper != null) {
 		})
 		animateCurrentSlide(document.querySelectorAll('.service-swiper .swiper-slide')[swiper4.activeIndex])
 	});
+}
+if(blogFilterBtn != null && blogFilterBtn != undefined) {
+	blogFilterBtn.addEventListener('click', (e) => {
+		e.preventDefault();
+		blogFilterBtn.classList.toggle('active');
+		blogFilterBtn.nextElementSibling.classList.toggle('active');
+	})
 }

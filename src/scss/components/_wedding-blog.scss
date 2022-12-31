@@ -80,6 +80,7 @@
 	.wedding-blog {
 		padding-top: 150px;
 		padding-bottom: 150px;
+		overflow: hidden;
 	}
 }
 @media(max-width: 1340px) {
@@ -119,5 +120,102 @@ margin-top: 10px;
 	.wedding-blog__title {
 		font-size: 50px;
 		line-height: 52px;
+	}
+}
+@media(max-width: 992px) {
+	.wedding-blog-wrapper {
+		flex-direction: column;
+		align-items: center;
+		gap: 100px;
+	}
+	.wedding-blog__title {
+		text-align: center;
+		br {
+			display: none;
+		}
+	}
+	.wedding-blog__text {
+		padding-right: 0;
+		margin-top: 50px;
+		text-align: center;
+	}
+	.wedding-btn {
+		margin: 0 auto;
+	}
+	.wedding-blog .contacts-bg {
+		bottom: 60%;
+	}
+	.wedding-blog .wedding-blog__images-wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+	.wedding-blog__images-title {
+		font-size: 18px;
+		margin-top: 20px;
+		line-height: 29px;
+	}
+	.wedding-blog-image {
+		max-width: 514px;
+	}
+	.wedding-blog .wedding-blog__images-wrapper {
+		gap: 50px;
+	}
+	.wedding-blog .wedding-blog__images-wrapper .wedding-blog__images-column:first-child .wedding-blog__images-item:last-child {
+		margin-top: 50px;
+	}
+	.wedding-blog .contacts-bg {
+		top: 0;
+		bottom: auto;
+		transform: translate(-50%, 0);
+	}
+	.wedding-blog {
+		padding-top: 0;
+		margin-top: 150px;
+	}
+}
+@media(max-width: 700px) {
+	.wedding-btn {
+		display: block;
+		max-width: 145px;
+	}
+	.wedding-blog__text-wrapper {
+		max-width: 514px;
+	}
+	.wedding-blog {
+		padding-bottom: 100px;
+	}
+	.wedding-blog__title {
+		font-size: 48px;
+		line-height: 58px;
+	}
+	.wedding-blog__text {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.wedding-blog .contacts-bg {
+		display: block;
+		max-width: 100%;
+		top: 100px;
+		width: 100%;
+		min-width: 600px;
+	}
+
+	.wedding-blog-image {
+		max-width: 100%;
+		width: 100%;
+	}
+	.wedding-blog-wrapper {
+		gap: 50px;
+	}
+	.wedding-blog__images-title {
+		font-size: 16px;
+line-height: 26px;
+margin-top: 10px;
+	}
+	.wedding-blog .wedding-blog__images-wrapper .wedding-blog__images-column:first-child .wedding-blog__images-item:last-child {
+		margin-top: 20px;
+	}
+	.wedding-blog .wedding-blog__images-wrapper {
+		gap: 20px;
 	}
 }

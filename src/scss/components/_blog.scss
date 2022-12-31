@@ -200,3 +200,142 @@
 		grid-row-gap: 50px;
 	}
 }
+@media(max-width: 992px) {
+	.blog-wrapper {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		flex-direction: column;
+		align-items: center;
+	}
+	.articles__title {
+		margin-bottom: 20px;
+	}
+	.articles-wrapper {
+		margin-top: 100px;
+	}
+	.article-item__title {
+		margin-top: 10px;
+	}
+	.articles-items__wrapper {
+		grid-row-gap: 40px;
+	}
+	.navigation-wrapper {
+		width: 100%;
+		margin-right: 0;
+	}
+	.navigation-items__wrapper {
+		display: none;
+	}
+	.filter__title {
+		margin: 0;
+		font-family: 'Anya Tamy';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 21px;
+		color: $pink-color
+	}
+	.filter__title-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 12px 0;
+		width: 100%;
+		background: #F4EEEA;
+		border: 1px solid #858585;
+		border-radius: 5px;
+		position: relative;
+		z-index: 2;
+		svg {
+			margin-left: 5px;
+		}
+		transition: all 0.3s ease-in-out;
+		&.active {
+			box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+			transition: all 0.3s ease-in-out;
+
+		}
+
+
+	}
+	.navigation-items__wrapper--mobile {
+		max-height: 47px;
+		transition: all 0.3s ease-in-out;
+		&.active {
+			max-height: none;
+			transition: all 0.3s ease-in-out;
+		}
+	}
+	.navigation__title {
+		margin-bottom: 20px;
+	}
+
+	.filter__items-wrapper {
+		background: #F4EEEA;
+border-radius: 0px 0px 5px 5px;
+border-top: none;
+position: relative;
+top: -5px;
+overflow: hidden;	max-height: 0;
+border: 1px solid #858585;;
+border-top: none;
+transition: all 0.3s ease-in-out;
+&.active {
+	max-height: 1000px;
+
+	transition: all 0.3s ease-in-out;
+
+}
+	}
+	.filter__item {
+
+font-family: 'Anya Tamy';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21	px;
+/* identical to box height */
+margin: 0;
+text-align: center;
+
+color: #464646;
+padding: 15px 0;
+border-bottom: 1px solid #858585;
+
+&:first-child {
+	border-top: 1px solid #858585
+}
+	}
+	.filter__item.active {
+		color: $pink-color;
+		transition: all 0.3s ease-in-out;
+	}
+	.navigation-items__wrapper--mobile {
+		transition: max-height 0.3s ease-in-out;
+		position: relative;
+
+
+	}
+	.filter__items-wrapper {
+		position: absolute;
+		top: 45px;
+		width: 100%;
+	}
+}
+@media(max-width: 700px) {
+	.articles-wrapper {
+		margin-top: 40px;
+	}
+	.articles__title, .navigation__title {
+		font-size: 24px;
+line-height: 28px;
+text-align: center;
+	}
+	.articles-items__wrapper {
+		grid-template-columns: 1fr;
+	}
+	.pagination-wrapper {
+		margin-top: 50px;
+	}
+
+}

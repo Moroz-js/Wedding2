@@ -13,6 +13,8 @@ html {
     font-family: $font-family, sans-serif;
     -webkit-text-size-adjust: 100%;
     background: #ede3de;
+	max-width: 1920px;
+	margin: 0 auto
 }
 
 .page__body {
